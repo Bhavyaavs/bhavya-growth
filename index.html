@@ -82,23 +82,19 @@
   .offer p { max-width: 52ch; margin: 0 auto 22px; opacity: .92; font-size: 15.5px; }
   .offer .btn-wa { background: #fff; color: var(--accent); }
 
-  /* Risk comparison */
-  .risk { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
-  .risk h2 { font-size: 26px; margin-bottom: 8px; }
-  .risk-sub { color: var(--muted); font-size: 15px; margin: 0 0 24px; max-width: 60ch; }
-  .risk-table { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .risk-table > div { background: var(--paper); padding: 14px 16px; font-size: 14px; }
-  .risk-table .head { background: var(--bg); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
-  .risk-table .head.me { color: var(--accent); }
-  .risk-table .row-label { color: var(--muted); }
-  .risk-table .bad { color: #a24a3f; }
-  .risk-table .good { color: var(--accent); font-weight: 600; }
-  @media (max-width: 640px) {
-    .risk-table { grid-template-columns: 1fr; }
-    .risk-table .head:not(.row-label-head) { border-top: 1px solid var(--line); }
-    .risk-table > div:nth-child(3n+1) { font-weight: 600; background: var(--bg); }
-  }
-  .risk-note { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+  /* Risk comparison — kept short and scannable */
+  .risk { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 28px 24px; }
+  .risk h2 { font-size: 22px; margin-bottom: 18px; }
+  .risk-simple { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .risk-simple { grid-template-columns: 1fr; } }
+  .risk-box { border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; }
+  .risk-box.bad { background: color-mix(in srgb, #a24a3f 10%, var(--bg)); }
+  .risk-box.good { background: var(--accent-soft); }
+  .rb-label { font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+  .risk-box.bad .rb-label { color: #a24a3f; }
+  .risk-box.good .rb-label { color: var(--accent); }
+  .rb-line { font-size: 16px; font-weight: 600; }
+  .risk-note { margin-top: 18px; font-size: 15px; }
   .risk-note b { color: var(--accent); }
 
   /* About */
@@ -127,7 +123,8 @@
   </div>
   <span class="eyebrow">Local growth, no ads needed</span>
   <h1>I help local businesses get more <span class="accent">repeat customers</span> and <span class="accent">Google reviews</span> — using WhatsApp.</h1>
-  <p class="lede">Most local businesses don't have a lead problem. They have a leak: old customers who never come back, enquiries that go unanswered, and a weak Google presence next to competitors with more reviews. I fix that, and I show you the numbers every week.</p>
+  <p class="lede">Your old customers stop coming back. New ones can't find you on Google. I fix both, and show you the numbers every week.</p>
+  <p class="te" style="color:var(--muted);font-size:15px;margin:-6px 0 0">Mee old customers ni malli tీసుకuravadam, Google lo mee reviews penchadam — nenu chestha, prathi week numbers chupistha.</p>
   <div class="cta-row">
     <a class="btn btn-wa js-wa" href="#" data-msg="Namaste! I saw your page — I'd like to talk about growing my business.">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
@@ -147,8 +144,8 @@
       <div class="badge"><span class="k">Roots</span><span class="v">Vizag, family in local retail</span></div>
     </div>
     <div>
-      <p>I'm a <strong>Chartered Accountant with over 6 years in corporate finance</strong> — trained to be precise about numbers, not to guess. That's the same discipline I bring here: I track what's actually happening to a business, not what sounds good.</p>
-      <p>My parents run a <strong>beauty parlour and a soda shop here in Vizag</strong>. I've watched them lose customers to competitors with more reviews and faster replies, not better work. That's what got me doing this in the first place, starting with my own mother's parlour before offering it to anyone else.</p>
+      <p>My own parents run a <strong>beauty parlour and a soda shop in Vizag</strong>. I saw them lose customers to shops with more Google reviews, not better work — so I fixed it for my mom first.</p>
+      <p class="te">Naa parents Vizag lo shop pettukunnaru — nenu naa mom kosam ivi అన్ని chesanu, ippudu inko business ki kuda cheyagalanu.</p>
     </div>
   </div>
 </section>
@@ -157,38 +154,21 @@
   <span class="eyebrow">What I do</span>
   <h2 style="font-size:28px;margin:10px 0 22px">Three things, done properly</h2>
   <div class="services">
-    <div class="svc"><span class="num">01</span><h3>Google Business Profile</h3><p>A complete, verified profile with real photos, services, prices and hours — so you show up when people search nearby.</p></div>
-    <div class="svc"><span class="num">02</span><h3>Reviews</h3><p>A simple system to ask happy customers for a Google review, so you compete on trust with the businesses next to you.</p></div>
-    <div class="svc"><span class="num">03</span><h3>WhatsApp reactivation</h3><p>Your old customers, brought back with a simple WhatsApp system — no ad spend, no new leads needed.</p></div>
+    <div class="svc"><span class="num">01</span><h3>Google Business Profile</h3><p>Photos, prices, hours — so people find you on Google.</p></div>
+    <div class="svc"><span class="num">02</span><h3>Reviews</h3><p>A simple system to get more 5-star reviews.</p></div>
+    <div class="svc"><span class="num">03</span><h3>WhatsApp reminders</h3><p>Old customers, brought back with one message.</p></div>
   </div>
 </section>
 
 <section aria-label="Not like running ads">
   <div class="risk">
-    <h2>This is not an ad campaign</h2>
-    <p class="risk-sub">Google or Facebook ads cost money the moment you turn them on, whether or not anyone books. Here, the money only moves after you've already seen it working.</p>
-    <div class="risk-table" role="table" aria-label="Comparing ads to working with Bhavya">
-      <div class="head row-label-head" role="columnheader"></div>
-      <div class="head bad" role="columnheader">Running ads</div>
-      <div class="head good me" role="columnheader">Working with me</div>
-
-      <div class="row-label" role="rowheader">To start</div>
-      <div class="bad" role="cell">You pay an ad budget upfront</div>
-      <div class="good" role="cell">Free — I set up your Google Profile first</div>
-
-      <div class="row-label" role="rowheader">If it doesn't work</div>
-      <div class="bad" role="cell">The ad budget is already spent, gone either way</div>
-      <div class="good" role="cell">You've spent ₹0. You keep the profile and reviews regardless</div>
-
-      <div class="row-label" role="rowheader">If you stop paying</div>
-      <div class="bad" role="cell">Your ads disappear immediately</div>
-      <div class="good" role="cell">Your Google Profile, reviews and saved customers stay yours forever</div>
-
-      <div class="row-label" role="rowheader">What you're paying for later</div>
-      <div class="bad" role="cell">More clicks, no guarantee any convert</div>
-      <div class="good" role="cell">Someone keeping your reviews, replies and follow-ups going every week</div>
+    <h2>Ads cost money even if nobody comes. This doesn't.</h2>
+    <div class="risk-simple">
+      <div class="risk-box bad"><span class="rb-label">Ads</span><span class="rb-line">Pay first. Hope it works.</span></div>
+      <div class="risk-box good"><span class="rb-label">Me</span><span class="rb-line">Free first step. Pay only if you like it.</span></div>
     </div>
-    <p class="risk-note">In the worst case, you've spent nothing and you still own a real, working Google Profile. In the ordinary case, when the leaks this fixes are real, that shows up as <b>more reviews, more calls, and old customers coming back</b> — and that's what we check together, with real numbers, before you ever pay a rupee.</p>
+    <p class="risk-note"><b>Worst case: you pay ₹0</b>, and you still keep your Google Profile and reviews. Best case: more reviews, more calls, old customers coming back.</p>
+    <p class="te risk-note" style="margin-top:8px">Worst case lo meeku ₹0 kharchu — mee Google profile mee daggarే untundi. Nachite ne next step ki వెళదాం.</p>
   </div>
 </section>
 
