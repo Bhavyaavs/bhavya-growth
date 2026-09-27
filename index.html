@@ -82,6 +82,25 @@
   .offer p { max-width: 52ch; margin: 0 auto 22px; opacity: .92; font-size: 15.5px; }
   .offer .btn-wa { background: #fff; color: var(--accent); }
 
+  /* Risk comparison */
+  .risk { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
+  .risk h2 { font-size: 26px; margin-bottom: 8px; }
+  .risk-sub { color: var(--muted); font-size: 15px; margin: 0 0 24px; max-width: 60ch; }
+  .risk-table { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .risk-table > div { background: var(--paper); padding: 14px 16px; font-size: 14px; }
+  .risk-table .head { background: var(--bg); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .risk-table .head.me { color: var(--accent); }
+  .risk-table .row-label { color: var(--muted); }
+  .risk-table .bad { color: #a24a3f; }
+  .risk-table .good { color: var(--accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .risk-table { grid-template-columns: 1fr; }
+    .risk-table .head:not(.row-label-head) { border-top: 1px solid var(--line); }
+    .risk-table > div:nth-child(3n+1) { font-weight: 600; background: var(--bg); }
+  }
+  .risk-note { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+  .risk-note b { color: var(--accent); }
+
   footer { text-align: center; padding-block: 32px 48px; color: var(--muted); font-size: 13px; }
 </style>
 </head>
@@ -116,6 +135,35 @@
     <div class="svc"><span class="num">01</span><h3>Google Business Profile</h3><p>A complete, verified profile with real photos, services, prices and hours — so you show up when people search nearby.</p></div>
     <div class="svc"><span class="num">02</span><h3>Reviews</h3><p>A simple system to ask happy customers for a Google review, so you compete on trust with the businesses next to you.</p></div>
     <div class="svc"><span class="num">03</span><h3>WhatsApp reactivation</h3><p>Your old customers, brought back with a simple WhatsApp system — no ad spend, no new leads needed.</p></div>
+  </div>
+</section>
+
+<section aria-label="Not like running ads">
+  <div class="risk">
+    <h2>This is not an ad campaign</h2>
+    <p class="risk-sub">Google or Facebook ads cost money the moment you turn them on, whether or not anyone books. Here, the money only moves after you've already seen it working.</p>
+    <div class="risk-table" role="table" aria-label="Comparing ads to working with Bhavya">
+      <div class="head row-label-head" role="columnheader"></div>
+      <div class="head bad" role="columnheader">Running ads</div>
+      <div class="head good me" role="columnheader">Working with me</div>
+
+      <div class="row-label" role="rowheader">To start</div>
+      <div class="bad" role="cell">You pay an ad budget upfront</div>
+      <div class="good" role="cell">Free — I set up your Google Profile first</div>
+
+      <div class="row-label" role="rowheader">If it doesn't work</div>
+      <div class="bad" role="cell">The ad budget is already spent, gone either way</div>
+      <div class="good" role="cell">You've spent ₹0. You keep the profile and reviews regardless</div>
+
+      <div class="row-label" role="rowheader">If you stop paying</div>
+      <div class="bad" role="cell">Your ads disappear immediately</div>
+      <div class="good" role="cell">Your Google Profile, reviews and saved customers stay yours forever</div>
+
+      <div class="row-label" role="rowheader">What you're paying for later</div>
+      <div class="bad" role="cell">More clicks, no guarantee any convert</div>
+      <div class="good" role="cell">Someone keeping your reviews, replies and follow-ups going every week</div>
+    </div>
+    <p class="risk-note">In the worst case, you've spent nothing and you still own a real, working Google Profile. In the ordinary case, when the leaks this fixes are real, that shows up as <b>more reviews, more calls, and old customers coming back</b> — and that's what we check together, with real numbers, before you ever pay a rupee.</p>
   </div>
 </section>
 
