@@ -101,6 +101,17 @@
   .risk-note { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
   .risk-note b { color: var(--accent); }
 
+  /* About */
+  .about { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+  @media (max-width: 640px) { .about { grid-template-columns: 1fr; } }
+  .about-badges { display: flex; flex-direction: column; gap: 10px; }
+  .badge { border: 1px solid var(--line); background: var(--paper); border-radius: 12px; padding: 12px 16px; min-width: 190px; }
+  .badge .k { display: block; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 3px; }
+  .badge .v { font-family: var(--display); font-size: 17px; font-weight: 600; }
+  .about p { color: var(--muted); font-size: 15.5px; margin: 0 0 12px; }
+  .about p:last-child { margin-bottom: 0; }
+  .about strong { color: var(--ink); }
+
   footer { text-align: center; padding-block: 32px 48px; color: var(--muted); font-size: 13px; }
 </style>
 </head>
@@ -111,7 +122,7 @@
     <div class="avatar">B</div>
     <div>
       <div class="name">Bhavya</div>
-      <div class="loc">Visakhapatnam · working with Vizag &amp; Chennai businesses</div>
+      <div class="loc">Chartered Accountant · 6+ yrs corporate finance · Visakhapatnam</div>
     </div>
   </div>
   <span class="eyebrow">Local growth, no ads needed</span>
@@ -128,6 +139,20 @@
 </div>
 
 <div class="wrap">
+<section aria-label="About">
+  <div class="about">
+    <div class="about-badges">
+      <div class="badge"><span class="k">Qualification</span><span class="v">Chartered Accountant</span></div>
+      <div class="badge"><span class="k">Experience</span><span class="v">6+ years, corporate finance</span></div>
+      <div class="badge"><span class="k">Roots</span><span class="v">Vizag, family in local retail</span></div>
+    </div>
+    <div>
+      <p>I'm a <strong>Chartered Accountant with over 6 years in corporate finance</strong> — trained to be precise about numbers, not to guess. That's the same discipline I bring here: I track what's actually happening to a business, not what sounds good.</p>
+      <p>My parents run a <strong>beauty parlour and a soda shop here in Vizag</strong>. I've watched them lose customers to competitors with more reviews and faster replies, not better work. That's what got me doing this in the first place, starting with my own mother's parlour before offering it to anyone else.</p>
+    </div>
+  </div>
+</section>
+
 <section aria-label="What I do">
   <span class="eyebrow">What I do</span>
   <h2 style="font-size:28px;margin:10px 0 22px">Three things, done properly</h2>
